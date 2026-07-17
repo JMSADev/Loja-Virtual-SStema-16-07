@@ -6,9 +6,7 @@ import { produtos } from "./produtos.js";
 // PEGANDO ELEMENTO DO DOM
 const section_cards = document.querySelector('#cards');
 
-// ============================================
 // CARRINHO — funções para salvar produtos no localStorage
-// ============================================
 
 // Pega o carrinho salvo no localStorage (ou um array vazio se ainda não existir nada)
 const pegarCarrinho = () => {
@@ -17,7 +15,7 @@ const pegarCarrinho = () => {
 }
 
 // Salva o array do carrinho de volta no localStorage
-// (localStorage só guarda texto, por isso usamos JSON.stringify para transformar o array em texto)
+// (JSON.stringify para transformar o array em texto)
 const salvarCarrinho = (carrinho) => {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
 }
@@ -25,9 +23,18 @@ const salvarCarrinho = (carrinho) => {
 // Adiciona um produto ao carrinho e manda o usuário para a página do carrinho
 const adicionarAoCarrinho = (produto) => {
 
+    //  Ve se ta logado 
+    const usuarioLogado = localStorage.getItem('usuarioLogado');
+    if (!usuarioLogado) {
+        alert("Você precisa fazer login ou criar uma conta para comprar jogos!");
+        window.location.href = 'paginas/login.html'; 
+        return;
+    }
+
+
     const carrinho = pegarCarrinho();
 
-    // Verifica se esse jogo já está no carrinho (compara pelo id do produto)
+    // ve se o jogo ja esta no carrinho
     const jaEstaNoCarrinho = carrinho.some(elem => elem.id === produto.id);
 
     if (jaEstaNoCarrinho) {
@@ -40,7 +47,6 @@ const adicionarAoCarrinho = (produto) => {
     salvarCarrinho(carrinho);
 
     // Redireciona para a página do carrinho.
-    // Como o index.html está na raiz e carrinho.html está dentro de /paginas, o caminho é relativo.
     window.location.href = 'paginas/carrinho.html';
 }
 

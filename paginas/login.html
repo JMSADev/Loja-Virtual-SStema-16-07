@@ -53,14 +53,15 @@
 
                     <div class="abas-login">
                         <button class="aba-login ativa" id="aba-entrar">Entrar</button>
-                        <button class="aba-login" id="aba-criar">Criar Conta</button>
+                        <!-- Transforma a aba 'Criar Conta' em um link para cadastro.html -->
+                        <a href="cadastro.html" class="aba-login" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">Criar Conta</a>
                     </div>
 
                     <!-- ============ FORMULÁRIO DE LOGIN ============ -->
                     <form id="form-entrar" class="formulario-login">
 
-                        <label for="email-entrar">E-mail</label>
-                        <input type="email" id="email-entrar" placeholder="Seu Email" required>
+                        <label for="cpf-entrar">CPF</label>
+                        <input type="text" id="cpf-entrar" placeholder="Digite seu CPF (apenas números)" maxlength="14" required>
 
                         <label for="senha-entrar">Senha</label>
                         <input type="password" id="senha-entrar" placeholder="Sua senha" required>
@@ -71,33 +72,7 @@
 
                         <p class="texto-alternar">
                             Não tem uma conta?
-                            <a href="#" id="link-ir-criar">Cadastre-se</a>
-                        </p>
-
-                    </form>
-
-                    <!-- ============ FORMULÁRIO DE CADASTRO ============ -->
-                    <form id="form-criar" class="formulario-login" style="display: none;">
-
-                        <label for="nome-criar">Nome</label>
-                        <input type="text" id="nome-criar" placeholder="Seu nome" required>
-
-                        <label for="email-criar">E-mail</label>
-                        <input type="email" id="email-criar" placeholder="seu@email.com" required>
-
-                        <label for="senha-criar">Senha</label>
-                        <input type="password" id="senha-criar" placeholder="Crie uma senha" required>
-
-                        <label for="senha-confirmar">Confirmar senha</label>
-                        <input type="password" id="senha-confirmar" placeholder="Repita a senha" required>
-
-                        <p class="mensagem-erro" id="erro-criar"></p>
-
-                        <button type="submit" class="btn_entrar">Criar Conta</button>
-
-                        <p class="texto-alternar">
-                            Já tem uma conta?
-                            <a href="#" id="link-ir-entrar">Entrar</a>
+                            <a href="cadastro.html">Cadastre-se</a>
                         </p>
 
                     </form>
