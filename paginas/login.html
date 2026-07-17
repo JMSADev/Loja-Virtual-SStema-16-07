@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carrinho - SStema</title>
+
+        <link rel="shortcut icon" href="../imagens/logo.png" type="image/png">
+        <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
+        <link rel="stylesheet" href="../css/style_login.css">
+    </head>
+<body>
+
+    <main id="geral">
+
+        <header id="cabecalho">
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="../imagens/logo.png" alt="Logo SStema">
+                </a>
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="../index.html" class="lnk_menu">Loja</a></li>
+                    <li><a href="biblioteca.html" class="lnk_menu">Biblioteca</a></li>
+                    <li><a href="sobre.html" class="lnk_menu">Sobre</a></li>
+                    
+                </ul>
+            </nav>
+
+            <div id="icones">
+                <ul>
+                    <li><a href="login.html"><img src="../icones/login.png" alt="Login"></a></li>
+                    <li><a href="carrinho.html"><img src="../icones/carrinho.png" alt="Carrinho"></a></li>
+                </ul>
+            </div>
+        </header>
+        <section id="login-conteudo">
+
+            <div class="caixa-login">
+
+                <!-- Mostrado só se já tiver alguém logado -->
+                <div id="ja-logado" class="ja-logado" style="display: none;">
+                    <p>Você já está logado como <strong id="nome-usuario-logado"></strong>.</p>
+                    <div class="botoes-ja-logado">
+                        <button class="btn_entrar" id="btn-ir-loja">Ir para a loja</button>
+                        <button class="btn_secundario_login" id="btn-sair">Sair da conta</button>
+                    </div>
+                </div>
+
+                <div id="area-formularios">
+
+                    <div class="abas-login">
+                        <button class="aba-login ativa" id="aba-entrar">Entrar</button>
+                        <button class="aba-login" id="aba-criar">Criar Conta</button>
+                    </div>
+
+                    <!-- ============ FORMULÁRIO DE LOGIN ============ -->
+                    <form id="form-entrar" class="formulario-login">
+
+                        <label for="email-entrar">E-mail</label>
+                        <input type="email" id="email-entrar" placeholder="Seu Email" required>
+
+                        <label for="senha-entrar">Senha</label>
+                        <input type="password" id="senha-entrar" placeholder="Sua senha" required>
+
+                        <p class="mensagem-erro" id="erro-entrar"></p>
+
+                        <button type="submit" class="btn_entrar">Entrar</button>
+
+                        <p class="texto-alternar">
+                            Não tem uma conta?
+                            <a href="#" id="link-ir-criar">Cadastre-se</a>
+                        </p>
+
+                    </form>
+
+                    <!-- ============ FORMULÁRIO DE CADASTRO ============ -->
+                    <form id="form-criar" class="formulario-login" style="display: none;">
+
+                        <label for="nome-criar">Nome</label>
+                        <input type="text" id="nome-criar" placeholder="Seu nome" required>
+
+                        <label for="email-criar">E-mail</label>
+                        <input type="email" id="email-criar" placeholder="seu@email.com" required>
+
+                        <label for="senha-criar">Senha</label>
+                        <input type="password" id="senha-criar" placeholder="Crie uma senha" required>
+
+                        <label for="senha-confirmar">Confirmar senha</label>
+                        <input type="password" id="senha-confirmar" placeholder="Repita a senha" required>
+
+                        <p class="mensagem-erro" id="erro-criar"></p>
+
+                        <button type="submit" class="btn_entrar">Criar Conta</button>
+
+                        <p class="texto-alternar">
+                            Já tem uma conta?
+                            <a href="#" id="link-ir-entrar">Entrar</a>
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer id="rodape">
+            <div id="dadosloja">
+                <h2>loja Online</h2>
+            </div>
+            <div id="icones_sociais"></div>
+            <div id="div-cartoes">
+                <img src="../icones/hipercard.png" alt="Hipercard">
+                <img src="../icones/visa.png" alt="Visa">
+                <img src="../icones/master_card.png" alt="MasterCard">
+            </div>
+        </footer>
+
+    </main>
+
+    <script type="module" src="../js/login.js"></script>
+</body>
+</html>

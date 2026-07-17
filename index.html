@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SStema</title>
+
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/style_estrutura_paginas.css">
+</head>
+
+<body>
+
+<main id="geral">
+
+    <header id="cabecalho">
+
+        <div id="logo">
+            <a href="index.html">
+                <img src="imagens/logo.png" alt="Logo SStema">
+            </a>
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html" class="lnk_menu">Loja</a></li>
+                <li><a href="paginas/biblioteca.html" class="lnk_menu">Biblioteca</a></li>
+                <li><a href="paginas/sobre.html" class="lnk_menu">Sobre</a></li>
+            </ul>
+        </nav>
+
+        <div id="icones">
+            <ul>
+
+                <li>
+                    <a href="paginas/login.html">
+                        <img src="icones/login.png" alt="Login">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="paginas/carrinho.html">
+                        <img src="icones/carrinho.png" alt="Carrinho">
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </header>
+
+    <section id="pesquisa">
+
+        <div class="pesquisa-wrapper">
+            <input
+                type="text" id="campo-pesquisa" placeholder="Digite seu produto" autocomplete="off">
+
+            <!-- Dropdown com os resultados da pesquisa, preenchido via JS -->
+            <div id="resultado-pesquisa"></div>
+        </div>
+
+    </section>
+
+    <div style="text-align: center; padding: 20px;">
+        <ul id="menu-secoes"></ul>
+    </div>
+
+    <section id="cards">
+
+    </section>
+
+    <footer id="rodape">
+
+        <div id="dadosloja">
+            <h2>Loja Online</h2>
+        </div>
+
+        <div id="icones_sociais">
+        </div>
+
+        <div id="div-cartoes">
+
+            <img src="icones/hipercard.png" alt="Hipercard">
+            <img src="icones/visa.png" alt="Visa">
+            <img src="icones/master_card.png" alt="MasterCard">
+
+        </div>
+
+    </footer>
+
+</main>
+
+<script type="module" src="js/carrega_produtos.js"></script>
+<script type="module" src="js/estado_login.js"></script>
+</body>
+</html>

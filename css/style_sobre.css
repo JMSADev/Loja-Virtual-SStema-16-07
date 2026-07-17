@@ -1,0 +1,32 @@
+
+.conteudo_interno {
+    max-width: 940px; 
+    margin: 40px auto; 
+    padding: 20px;
+    color: #c7d5e0; 
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+
+.titulo_pagina {
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #2a475e; 
+    padding-bottom: 10px;
+}
+
+.texto_sobre {
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 30px;
+    border-radius: 4px;
+    line-height: 1.6;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+}
+
+.texto_sobre p {
+    margin-bottom: 15px;
+}

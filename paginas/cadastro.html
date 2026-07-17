@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SStema</title>
+
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
+    <link rel="stylesheet" href="../css/style_formulario.css">
+</head>
+
+<body>
+
+<main id="geral">
+
+    <header id="cabecalho">
+
+        <div id="logo">
+            <a href="../index.html">
+                <img src="../imagens/logo.png" alt="Logo SStema">
+            </a>
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="../index.html" class="lnk_menu">Loja</a></li>
+                <li><a href="biblioteca.html" class="lnk_menu">Biblioteca</a></li>
+                <li><a href="sobre.html" class="lnk_menu">Sobre</a></li>
+            </ul>
+        </nav>
+
+        <div id="icones">
+            <ul>
+
+                <li>
+                    <a href="paginas/login.html">
+                        <img src="../icones/login.png" alt="Login">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../paginas/carrinho.html">
+                        <img src="../icones/carrinho.png" alt="Carrinho">
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </header>
+
+    <section id="formulario">
+        <h3>Cadastro</h3>
+
+        <form id="form-pessoa">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" class="input01" required maxlength="60" placeholder="Digite seu nome">
+
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" class="input02" required maxlength="14" placeholder="Digite seu CPF">
+
+            <label for="data-nascimento">Data de Nascimento</label>
+            <input type="date" name="data" id="data" class="input01" required>
+
+            <label for="sexo">Sexo</label>
+            <input type="radio" name="sexo" id="sexoM" class="inputOP" value="M">Masculino
+            <input type="radio" name="sexo" id="sexoF" class="inputOP" value="F">Feminino
+            <input type="radio" name="sexo" id="sexoO" class="inputOP" value="O">Outro
+
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" class="input02" required maxlength="9"
+            placeholder="Digite seu CEP">
+
+            <!-- Div que guarda o endereço (inicia oculta) -->
+            <div id="div-dados-endereco" class="oculto">
+                <label for="logradouro">Logradouro</label>
+                <input type="text" name="logradouro" id="logradouro" class="input01" readonly>
+                
+                <label for="num-residencia">Número</label>
+                <input type="text" name="num-residencia" id="num-residencia" class="input02" maxlength="10" placeholder="Número da residência">
+
+                <label for="complemento-end">Complemento</label>
+                <input type="text" name="complemento-end" id="complemento-end" class="input01" maxlength="100" placeholder="Ex: Apto 101">
+
+                <label for="bairro">Bairro</label>
+                <input type="text" name="bairro" id="bairro" class="input01" readonly>
+
+                <label for="localidade">Cidade</label>
+                <input type="text" name="localidade" id="localidade" class="input01" readonly>
+
+                <label for="uf">UF</label>
+                <input type="text" name="uf" id="uf" class="input01" readonly>
+            </div>
+
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" class="input02" required maxlength="6" placeholder="Informe uma senha">
+
+            <div id="div-btns"></div>
+            <button type="submit" id="btn-add">Cadastrar</button>
+            <button type="reset" id="btn-limpar">Limpar</button>
+
+        </form>
+    </section>
+
+    <!-- Adicione a tag do script antes de fechar a tag <main> ou </body> -->
+    <script src="../js/via_cep.js"></script>

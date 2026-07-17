@@ -1,0 +1,210 @@
+/* ============================================
+   SStema — Biblioteca (versão simples)
+   Usa as variáveis definidas em style_estrutura_paginas.css
+   ============================================ */
+
+   #biblioteca {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: calc(100vh - 200px);
+    border-top: 1px solid var(--border);
+}
+
+/* ============ SIDEBAR (lista de jogos comprados) ============ */
+
+#lista-jogos {
+    background-color: var(--bg-header);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+}
+
+.titulo-lista-jogos {
+    font-family: var(--font-display);
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 20px 16px 12px;
+}
+
+.jogos {
+    list-style: none;
+}
+
+.jogo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.jogo-item:hover {
+    background-color: var(--bg-card-hover);
+}
+
+.jogo-item.ativo {
+    background-color: var(--bg-card-hover);
+    border-left-color: var(--accent-blue);
+}
+
+.jogo-item img {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.jogo-nome {
+    font-size: 14px;
+    color: var(--text-light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.jogo-item.ativo .jogo-nome {
+    color: var(--white);
+    font-weight: 500;
+}
+
+/* ============ PAINEL PRINCIPAL (jogo selecionado) ============ */
+
+#detalhe-jogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Estado: biblioteca vazia */
+
+#biblioteca-vazia {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+}
+
+#biblioteca-vazia p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.btn_ir_loja {
+    background: linear-gradient(90deg, #4c9fd8, var(--accent-blue-dark));
+    color: var(--white);
+    padding: 12px 26px;
+    border-radius: 3px;
+    font-family: var(--font-display);
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: filter 0.15s ease;
+}
+
+.btn_ir_loja:hover {
+    filter: brightness(1.15);
+}
+
+/* Estado: jogo selecionado */
+
+#jogo-selecionado {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 640px;
+}
+
+#capa-jogo {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.info-jogo-selecionado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+#titulo-jogo {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
+.btn_baixar {
+    background: linear-gradient(90deg, #4c9fd8, var(--accent-blue-dark));
+    color: var(--white);
+    border: none;
+    padding: 14px 40px;
+    border-radius: 3px;
+    font-family: var(--font-display);
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: filter 0.15s ease, transform 0.1s ease;
+}
+
+.btn_baixar:hover {
+    filter: brightness(1.15);
+}
+
+.btn_baixar:active {
+    transform: scale(0.97);
+}
+
+.botoes-jogo-selecionado {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.btn_remover_jogo {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 13px 20px;
+    border-radius: 3px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn_remover_jogo:hover {
+    background-color: rgba(242, 102, 102, 0.1);
+    color: #f26666;
+    border-color: #f26666;
+}
+
+/* ============ RESPONSIVO ============ */
+
+@media (max-width: 900px) {
+    #biblioteca {
+        grid-template-columns: 1fr;
+    }
+
+    #lista-jogos {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        max-height: 260px;
+    }
+
+    #titulo-jogo {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,175 @@
+   #login-conteudo {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px 80px;
+    min-height: calc(100vh - 300px);
+}
+
+.caixa-login {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ============ AVISO "JÁ ESTÁ LOGADO" ============ */
+
+.ja-logado {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 30px;
+    text-align: center;
+}
+
+.ja-logado p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.ja-logado strong {
+    color: var(--accent-blue);
+}
+
+.botoes-ja-logado {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn_secundario_login {
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    padding: 12px;
+    border-radius: 3px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn_secundario_login:hover {
+    background-color: var(--bg-card-hover);
+    color: var(--white);
+}
+
+/* ============ ABAS ============ */
+
+.abas-login {
+    display: flex;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.aba-login {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 14px;
+    font-family: var(--font-display);
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.aba-login:hover {
+    color: var(--text-light);
+}
+
+.aba-login.ativa {
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue);
+}
+
+/* ============ FORMULÁRIOS ============ */
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 30px;
+}
+
+.formulario-login label {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.formulario-login label:first-child {
+    margin-top: 0;
+}
+
+.formulario-login input {
+    padding: 11px 14px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    background-color: var(--bg-body);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.formulario-login input::placeholder {
+    color: var(--text-muted);
+}
+
+.formulario-login input:focus {
+    border-color: var(--accent-blue);
+}
+
+.mensagem-erro {
+    color: #f26666;
+    font-size: 13px;
+    min-height: 16px;
+    margin-top: 10px;
+}
+
+.btn_entrar {
+    margin-top: 14px;
+    padding: 13px;
+    border: none;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #4c9fd8, var(--accent-blue-dark));
+    color: var(--white);
+    font-family: var(--font-display);
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: filter 0.15s ease, transform 0.1s ease;
+}
+
+.btn_entrar:hover {
+    filter: brightness(1.15);
+}
+
+.btn_entrar:active {
+    transform: scale(0.98);
+}
+
+.texto-alternar {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.texto-alternar a {
+    color: var(--accent-blue);
+    text-decoration: underline;
+}
+
+.texto-alternar a:hover {
+    color: var(--white);
+}

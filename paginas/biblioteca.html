@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biblioteca - SStema</title>
+
+        <link rel="shortcut icon" href="../imagens/logo.png" type="image/png">
+        <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
+        <link rel="stylesheet" href="../css/style_biblioteca.css">
+    </head>
+<body>
+
+    <main id="geral">
+
+        <header id="cabecalho">
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="../imagens/logo.png" alt="Logo SStema">
+                </a>
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="../index.html" class="lnk_menu">Loja</a></li>
+                    <li><a href="biblioteca.html" class="lnk_menu">Biblioteca</a></li>
+                    <li><a href="sobre.html" class="lnk_menu">Sobre</a></li>
+                </ul>
+            </nav>
+
+            <div id="icones">
+                <ul>
+                    <li><a href="login.html"><img src="../icones/login.png" alt="Login"></a></li>
+                    <li><a href="carrinho.html"><img src="../icones/carrinho.png" alt="Carrinho"></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section id="biblioteca">
+
+            <!-- ============ COLUNA ESQUERDA: lista de jogos comprados ============ -->
+            <aside id="lista-jogos">
+                <h2 class="titulo-lista-jogos">Meus Jogos</h2>
+                <ul class="jogos" id="jogos-biblioteca">
+                    <!-- Preenchido via JS com os jogos comprados -->
+                </ul>
+            </aside>
+
+            <!-- ============ COLUNA DIREITA: jogo selecionado ============ -->
+            <section id="detalhe-jogo">
+
+                <!-- Mostrado quando a biblioteca está vazia -->
+                <div id="biblioteca-vazia" style="display: none;">
+                    <p>Sua biblioteca ainda está vazia.</p>
+                    <a href="../index.html" class="btn_ir_loja">Ir para a loja</a>
+                </div>
+
+                <!-- Mostrado quando existe pelo menos 1 jogo -->
+                <div id="jogo-selecionado" style="display: none;">
+                    <img id="capa-jogo" src="" alt="">
+
+                    <div class="info-jogo-selecionado">
+                        <h1 id="titulo-jogo"></h1>
+                        <div class="botoes-jogo-selecionado">
+                            <button class="btn_baixar" id="btn-baixar">⬇ Baixar</button>
+                            <button class="btn_remover_jogo" id="btn-remover-jogo">Remover da biblioteca</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </section>
+
+        <footer id="rodape">
+            <div id="dadosloja">
+                <h2>loja Online</h2>
+            </div>
+            <div id="icones_sociais"></div>
+            <div id="div-cartoes">
+                <img src="../icones/hipercard.png" alt="Hipercard">
+                <img src="../icones/visa.png" alt="Visa">
+                <img src="../icones/master_card.png" alt="MasterCard">
+            </div>
+        </footer>
+
+    </main>
+
+    <script type="module" src="../js/carrega_biblioteca.js"></script>
+</body>
+</html>
